@@ -2,17 +2,28 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+    <title>Tribook</title>
+    <%- include('./partials/head') %>
 </head>
 
 <body>
     <h1>Add New Apartment</h1>
     <div class="container">
-        <label for="title">Title</label>
-        <input type="text" name="title" id="title">
+        <form action="./admin/apartment/new-apartment" method="POST">
+            <label for="title">Nombre del anuncio</label>
+            <input type="text" name="title" id="title" required maxlength="20">
+            <label for="price">Precio</label>
+            <input type="text" name="price" id="price" required>
+            <label for="squareMeters">Superficie (m2)</label>
+            <input type="text" name="squareMeters" id="squareMeters" min="10" required>
+            <label for="photo">Sube una o varias foto para tu anuncio</label>
+            <input type="file" id="photo" name="photo" accept=".jpg, .jpeg, .png, .gif, .pdf, WebP" multiple>
+            <button type="submit" class="photo-btn">Subir fotos</button>
+            <label for="photo">Si lo prefieres, puedes insertar una URL con la foto de tu apartamento</label>
+            <input type="url" name="mainPhoto" id="mainPhoto">
+            <button type="submit" class="photo-btn">Subir fotos</button>
+            <input type="submit" value="Añadir nuevo apartamento">
+        </form>
     </div>
 </body>
 

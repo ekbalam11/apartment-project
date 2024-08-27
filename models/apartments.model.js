@@ -16,7 +16,7 @@ const apartmentSchema = new Schema({
         required: true,
         min: 10
     },
-    photos: {
+    photo: {
         type: [String],
         min: 1,
         required: true,

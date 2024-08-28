@@ -9,18 +9,20 @@
 <body>
     <h1>Add New Apartment</h1>
     <div class="container">
-        <form action="./admin/apartment/new-apartment" method="POST">
+        <form action="/admin/apartment/new-apartment" method="POST">
             <label for="title">Nombre del anuncio</label>
             <input type="text" name="title" id="title" required maxlength="20">
+            <label for="description">Descripción del apartamento</label>
+            <textarea name="description" rows="5" id="description">Hermoso apartamento con...</textarea>
             <label for="price">Precio</label>
-            <input type="text" name="price" id="price" required>
+            <input type="number" name="price" id="price" required>
             <label for="squareMeters">Superficie (m2)</label>
-            <input type="text" name="squareMeters" id="squareMeters" min="10" required>
-            <label for="photo">Sube una o varias foto para tu anuncio</label>
-            <input type="file" id="photo" name="photo" accept=".jpg, .jpeg, .png, .gif, .pdf, WebP" multiple>
-            <button type="submit" class="photo-btn">Subir fotos</button>
-            <label for="photo">Si lo prefieres, puedes insertar una URL con la foto de tu apartamento</label>
-            <input type="url" name="mainPhoto" id="mainPhoto">
+            <input type="number" name="squareMeters" id="squareMeters" min="10" required>
+            <!-- <label for="photo">Sube una o varias foto para tu anuncio</label>
+            <input type="file" id="photo" name="photo" accept=".jpg, .jpeg, .png, .gif, .pdf, WebP" multiple> -->
+            <!-- <button type="submit" class="photo-btn">Subir fotos</button> -->
+            <label for="photo">Agrega una URL con la foto de tu apartamento</label>
+            <input type="url" name="photo" id="photo">
             <button type="submit" class="photo-btn">Subir fotos</button>
             <input type="submit" value="Añadir nuevo apartamento">
         </form>

@@ -7,8 +7,12 @@ const apartmentSchema = new Schema({
         required: true,
         unique: true
     },
+    description: {
+        type: String, 
+        required: true,
+    },
     price: {
-        type: number,
+        type: Number,
         required: true
     },
     squareMeters: {
@@ -20,7 +24,7 @@ const apartmentSchema = new Schema({
         type: [String],
         min: 1,
         required: true,
-        match: [/^(https?:\/\/)?([\da-z.-]+)\.([a-z.]{2,6})([/\w .-]*)*\/?$/, 'Please fill a valid URL for the image']
+        //match: [/^(https?:\/\/)?([\da-z.-]+)\.([a-z.]{2,6})([/\w .-]*)*\/?$/, 'Please fill a valid URL for the image']
     },
     amenities: { //array de strings
         wifi: Boolean,

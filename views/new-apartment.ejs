@@ -7,6 +7,9 @@
 </head>
 
 <body>
+    <header>
+        <%- include('./partials/nav.ejs') %>
+    </header>
     <h1>Add New Apartment</h1>
     <div class="container">
         <form action="/admin/apartment/new-apartment" method="POST">
@@ -25,6 +28,7 @@
             <input type="url" name="photo" id="photo">
             <button type="submit" class="photo-btn">Subir fotos</button>
             <input type="submit" value="Añadir nuevo apartamento">
+            <!-- //Add checkbox for amenities -->
         </form>
     </div>
 </body>

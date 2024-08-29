@@ -18,9 +18,21 @@ const getApartmentById = async(req, res) => {
     
     res.render('detail-apartment');
 };
+//Buscar apartamentos. Parsear la query string
+const searchApartments = async (req, res) => {
+    const { maxPrice } = req.query;
+
+// Pasarle estos apartamentos  ya filtrados a la vista
+const apartments = await Apartment.find({ price: { $lte:  maxPrice } });
+    res.render('home', {
+    apartments
+})
+
+}
 
 module.exports = {
     getApartments,
-    getApartmentById
+    getApartmentById,
+    searchApartments
 }
 

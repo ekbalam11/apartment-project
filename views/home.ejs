@@ -7,19 +7,25 @@
 </head>
 
 <body>
-    <h1>Home Page</h1>
+    <header>
+        <%- include('./partials/nav.ejs') %>
+    </header>
     <main class="container apartments">
         <% for (const ap of apartments) { %>
             <a href="/apartment/<%= ap._id %>">
                 <article class="apartment">
-                    <header>
+                    <header class="title">
                         <%= ap.title %>
                     </header>
-                    <div>
-                        <img src="<%= ap.photo %>" alt="">
+                    <div class="photo-frame">
+                        <img id="photo" src="<%= ap.photo %>" alt="">
+                    </div>
+                    <div class="description">
+                        <p><%= ap.description %></p>
                     </div>
                     <footer>
-                        <%= ap.price %> $ por noche
+                        <div class="squareMeters"><%= ap.squareMeters %> m2</div>
+                        <div class="price"><%= ap.price %> $ por noche</div>
                     </footer>
                 </article>
             </a>

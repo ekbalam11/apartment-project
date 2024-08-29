@@ -13,7 +13,7 @@ const postNewApartment = async (req, res) => {
         description: req.body.description,
         price: req.body.price,
         squareMeters: req.body.squareMeters,
-        photo: req.body.photo
+        photo: req.body.photo,
     })
     res.send('Apartamento creado')
 }

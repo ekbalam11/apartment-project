@@ -9,8 +9,9 @@ const router = express.Router();
 //Crear primer endpoint de administrador que es el que nos permite mostrar un formulario para añadir un nuevo apartamento
 const adminControllers = require('../controllers/admin.js');
 
-router.get('/apartment/new-apartment', adminControllers.getNewApartmentForm)
-router.post('/apartment/new-apartment', adminControllers.postNewApartment)
+router.get('/apartment/new-apartment', adminControllers.getNewApartmentForm);
+router.post('/apartment/new-apartment', adminControllers.postNewApartment);
+router.get('/apartment/:idApartment/edit', adminControllers.getEditApartmentForm )
 
 //Exportar estas rutas para que sean usadas en app.js
 module.exports = router;

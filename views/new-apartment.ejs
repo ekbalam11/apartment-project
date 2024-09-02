@@ -14,7 +14,8 @@
     <div class="container">
         <form action="/admin/apartment/new-apartment" method="POST">
             <label for="title">Nombre del anuncio</label>
-            <input type="text" name="title" id="title" required maxlength="20">
+            <input type="text" id="id" name="id" value="<%= apartment.id %>" hidden>
+            <input type="text" name="title" id="title" required maxlength="20" value="<%= apartment.title %>">
             <label for="description">Descripción del apartamento</label>
             <textarea name="description" rows="5" id="description">Hermoso apartamento con...</textarea>
             <label for="price">Precio</label>

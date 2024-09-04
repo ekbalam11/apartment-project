@@ -31,14 +31,14 @@ const postNewApartment = async (req, res) => {
     if(id) {
         //To do: 
         // 1. Buscar el documento en la base de datos a partir de su id
-            await Apartment.findByIdAndUpdate(req.body._id, req.body)
+            await Apartment.findByIdAndUpdate(id, req.body)
             console.log('apartmentUpdate: ', apartmentUpdate);
             
-        }
+        
         // 2. Actualizar sus campos a partir del req.body
         res.send('Apartamento actualizado');
         return
-    
+}
 
     await Apartment.create({ //Este Apartment viene exportado desde el modelo. El método.create agrega los elementos que uno le pida de la información que el usuario agregó en el Form
         title: req.body.title,

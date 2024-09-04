@@ -10,7 +10,10 @@
     <header>
         <%- include('./partials/nav.ejs') %>
     </header>
-    <h1>Add New Apartment</h1>
+
+    <h1>
+        <%= apartment._id? 'Editar' : 'Añadir' %> anuncio
+    </h1>
     <div class="container">
         <form action="/admin/apartment/new-apartment" method="POST">
             <label for="title">Nombre del anuncio</label>

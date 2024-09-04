@@ -29,10 +29,10 @@ const apartmentSchema = new Schema({
     amenities: { //array de strings
         wifi: Boolean,
         airConditioner: Boolean,
-        // kitchen: Boolean,
-        // disability: Boolean,
-        // heater: Boolean,
-        // tv: Boolean
+        kitchen: Boolean,
+        disability: Boolean,
+        heater: Boolean,
+        tv: Boolean
     },
 });
 
